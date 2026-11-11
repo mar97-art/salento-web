@@ -1,0 +1,498 @@
+
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F7F8F2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #315B3C;
+    color: white;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo h2 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #D9C18A;
+}
+
+/* PORTADA PRINCIPAL */
+#inicio {
+    min-height: 520px;
+    padding: 100px 8%;
+    background: linear-gradient(
+        rgba(20, 45, 28, 0.55),
+        rgba(20, 45, 28, 0.55)
+    ), url("../img/salento-portada.jpeg");
+
+    background-color: #789276;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#inicio h1 {
+    font-size: 48px;
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+#inicio p {
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+#inicio a {
+    background-color: #D9C18A;
+    color: #263C2B;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#inicio a:hover {
+    background-color: white;
+}
+
+/* SECCIONES */
+section:not(#inicio) {
+    padding: 65px 8%;
+    min-height: 250px;
+}
+
+section h2 {
+    color: #315B3C;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+section p {
+    max-width: 850px;
+    font-size: 17px;
+}
+
+/* FONDO ALTERNADO */
+#lugares,
+#gastronomia,
+#planifica {
+    background-color: #E8EFE3;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    background-color: #315B3C;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    #inicio {
+        min-height: 400px;
+        padding: 65px 7%;
+    }
+
+    #inicio h1 {
+        font-size: 34px;
+    }
+
+    #inicio p {
+        font-size: 18px;
+    }
+
+    section:not(#inicio) {
+        padding: 45px 7%;
+    }
+}
+/* SECCIÓN CONOCE SALENTO */
+.contenido-conoce {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    margin-top: 25px;
+}
+
+.contenido-conoce img {
+    width: 42%;
+    max-width: 450px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.texto-conoce {
+    flex: 1;
+}
+
+.texto-conoce h3 {
+    color: #315B3C;
+    font-size: 21px;
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.texto-conoce p,
+.texto-conoce li {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.texto-conoce ul {
+    padding-left: 20px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 768px) {
+    .contenido-conoce {
+        flex-direction: column;
+    }
+
+    .contenido-conoce img {
+        width: 100%;
+        height: 280px;
+    }
+}
+/* SECCIÓN LUGARES TURÍSTICOS */
+#lugares h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.busqueda-lugares {
+    width: 75%;
+    margin: 0 auto 75px;
+}
+
+.busqueda-lugares input {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #315B3C;
+    background-color: #F7F8F2;
+    font-size: 14px;
+    outline: none;
+}
+
+.contenedor-lugares {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 45px 28px;
+}
+
+.tarjeta-lugar {
+    display: flex;
+    align-items: stretch;
+    background-color: #315B3C;
+    color: white;
+    min-height: 96px;
+    overflow: hidden;
+}
+
+.tarjeta-lugar img {
+    width: 96px;
+    min-width: 96px;
+    object-fit: cover;
+}
+
+.info-lugar {
+    padding: 10px 14px;
+}
+
+.info-lugar h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+    color: white;
+}
+
+.info-lugar p {
+    font-size: 13px;
+    line-height: 1.25;
+    color: white;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 768px) {
+    .contenedor-lugares {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .busqueda-lugares {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
+
+/* SECCIÓN EXPERIENCIAS */
+#experiencias h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.tarjeta-experiencia .info-lugar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.tarjeta-experiencia .info-lugar h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.tarjeta-experiencia .info-lugar a {
+    color: #315B3C;
+    background-color: #D9C18A;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.tarjeta-experiencia .info-lugar a:hover {
+    background-color: white;
+}
+
+/* SECCIÓN GASTRONOMÍA */
+#gastronomia h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.subtitulo-gastronomia {
+    text-align: center;
+    margin: 0 auto 40px;
+    max-width: 750px;
+    color: #555;
+}
+
+.contenedor-gastronomia {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tarjeta-gastronomia {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #315B3C;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    min-height: 190px;
+}
+
+.tarjeta-gastronomia.invertida {
+    flex-direction: row-reverse;
+}
+
+.tarjeta-gastronomia img {
+    width: 40%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+.texto-gastronomia {
+    flex: 1;
+}
+
+.texto-gastronomia h3 {
+    color: #D9C18A;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.texto-gastronomia p {
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 768px) {
+    .tarjeta-gastronomia,
+    .tarjeta-gastronomia.invertida {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tarjeta-gastronomia img {
+        width: 100%;
+        height: 220px;
+    }
+}
+/* GALERÍA */
+
+#galeria h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.subtitulo-galeria {
+    text-align: center;
+    margin: 0 auto 35px;
+    color: #555;
+}
+
+.contenedor-galeria {
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contenedor-galeria img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .contenedor-galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor-galeria {
+        grid-template-columns: 1fr;
+    }
+}/* PLANIFICA TU VISITA */
+
+#planifica h2 {
+    text-align: center;
+    font-size: 27px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+
+.contenedor-planifica {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.tarjeta-planifica {
+    background-color: #315B3C;
+    color: white;
+    padding: 25px 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-height: 280px;
+}
+
+.icono-planifica {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-planifica h3 {
+    color: #D9C18A;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-planifica p {
+    color: white;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Adaptación para pantallas pequeñas */
+
+@media (max-width: 768px) {
+    .contenedor-planifica {
+        grid-template-columns: 1fr;
+    }
+}
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+/* DESCRIPCIONES DE EXPERIENCIAS */
+
+.detalle-experiencia {
+    color: white;
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 8px 0 0;
+    padding-top: 8px;
+    border-top: 1px solid #D9C18A;
+}
