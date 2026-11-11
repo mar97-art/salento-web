@@ -66,6 +66,7 @@ nav a:hover {
     background-color: #789276;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: white;
     display: flex;
     flex-direction: column;
