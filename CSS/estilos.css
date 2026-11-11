@@ -61,7 +61,7 @@ nav a:hover {
     background: linear-gradient(
         rgba(20, 45, 28, 0.55),
         rgba(20, 45, 28, 0.55)
-    ), url("../img/salento-portada.jpeg");
+    ), url("../Img/salento-portada.jpeg");
 
     background-color: #789276;
     background-size: cover;
@@ -165,7 +165,7 @@ footer {
     margin-top: 25px;
 }
 
-.contenido-conoce img {
+.contenido-conoce Img {
     width: 42%;
     max-width: 450px;
     height: 400px;
@@ -200,7 +200,7 @@ footer {
         flex-direction: column;
     }
 
-    .contenido-conoce img {
+    .contenido-conoce Img {
         width: 100%;
         height: 280px;
     }
@@ -244,7 +244,7 @@ footer {
     overflow: hidden;
 }
 
-.tarjeta-lugar img {
+.tarjeta-lugar Img {
     width: 96px;
     min-width: 96px;
     object-fit: cover;
@@ -352,7 +352,7 @@ footer {
     flex-direction: row-reverse;
 }
 
-.tarjeta-gastronomia img {
+.tarjeta-gastronomia Img {
     width: 40%;
     height: 180px;
     object-fit: cover;
@@ -383,7 +383,7 @@ footer {
         align-items: stretch;
     }
 
-    .tarjeta-gastronomia img {
+    .tarjeta-gastronomia Img {
         width: 100%;
         height: 220px;
     }
@@ -411,7 +411,7 @@ footer {
     gap: 20px;
 }
 
-.contenedor-galeria img {
+.contenedor-galeria Img {
     width: 100%;
     height: 190px;
     object-fit: cover;
@@ -480,7 +480,7 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-.logo img {
+.logo Img {
     width: 100px;
     height: auto;
     display: block;
